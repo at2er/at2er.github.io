@@ -1,0 +1,33 @@
+#!/bin/bash
+
+title="At2er's blog"
+posts=""
+post=$(smu "index.md")
+
+get_post_link() {
+	IFS=":" read -r path name <<< "$1"
+	local template="<p><a href=\"$path\">[$name]</a></p>"
+	if [[ -z $posts ]]; then
+		posts="${template}"
+	else
+		posts="${posts}"$'\n'"${template}"
+	fi
+}
+
+for term in $@; do
+	get_post_link $term
+done
+
+cat << EOF
+<head>
+	<title>$title</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<header>
+	<a class="home" href="index.html">[Home]</a>
+</header>
+<body>
+$post
+$posts
+</body>
+EOF

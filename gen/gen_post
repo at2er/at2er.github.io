@@ -1,0 +1,17 @@
+#!/bin/bash
+
+title="$1"
+post="$(smu "$2")"
+
+cat << EOF
+<head>
+	<title>$title</title>
+	<link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+<header>
+	<a class="home" href="../index.html">[Home]</a>
+</header>
+<body>
+$post
+</body>
+EOF

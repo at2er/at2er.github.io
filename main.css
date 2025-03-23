@@ -1,0 +1,17 @@
+.home {
+	font-family: "Noto Sans Bold";
+	color: #4444aa;
+}
+
+body {
+	margin: 2em auto;
+	max-width: 800px;
+}
+
+:root {
+	font-family: Noto Sans, Noto Sans CJK SC;
+	font-size: 16px;
+	color: #bbbbbb;
+	background-color: #000000;
+	hyphens: auto;
+}
