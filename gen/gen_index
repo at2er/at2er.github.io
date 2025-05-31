@@ -24,7 +24,9 @@ cat << EOF
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <header>
-	<a class="home" href="index.html">[Home]</a>
+	<a class="index" href="index.html">[Home]</a>
+	<a class="index" href="https://github.com/at2er">[Github]</a>
+	<a class="index" href="https://space.bilibili.com/3493139570493937">[BiliBili]</a>
 </header>
 <body>
 $post
